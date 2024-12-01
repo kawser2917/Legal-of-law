@@ -8,6 +8,8 @@
     <!-- Tailwind and Daisy Ui CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/8f726b1950.js" crossorigin="anonymous"></script>
     <!-- Taildwind Custom Color -->
     <script>
         tailwind.config = {
@@ -15,6 +17,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'primary-color': "#707070",
+                        'bg-color': "#B68C5A",
                     }
                 }
             }
@@ -26,22 +30,82 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- font style -->
-     <style>
-        .font-eb{
+    <style>
+        .font-eb {
             font-family: "EB Garamond", serif;
         }
-        .font-poppins{
+
+        .font-poppins {
             font-family: "Poppins", serif;
         }
-     </style>
+    </style>
 
 </head>
+
 <body>
     <header class="container mx-auto">
+        <nav class="my-4">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-primary-color font-poppins">
+                            <li><a>Home</a></li>
+                            <li><a>Services <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a>Cases <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a>Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a>Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="w-12" src="images/business.png" alt="">
+                        <a class="btn btn-ghost text-4xl font-extrabold font-eb ">Justice</a>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-primary-color font-poppins">
+                        <li><a>Home</a></li>
+                        <li><a>Services <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a>Cases <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a>Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a>Contact Us <i class="fa-solid fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-bg-color text-white">Free Consultation</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero rounded-lg my-7"
+            style="background-image: url(images/banner.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+                <div class="max-w-screen-md py-24 space-y-6">
+                    <h1 class="mb-5 text-5xl lg:text-7xl font-extrabold font-eb">We Provide Effective Legal Solutions</h1>
+                    <p class="mb-5 text-primary-color">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                    </p>
+                    <form action="" class="flex justify-center items-center gap-5">
+                        <input type="text" placeholder="Search your services" class="input lg:w-[500px]">
+                        <button class="btn bg-bg-color">Get Started</button>
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
 
     </header>
     <main class="container mx-auto">
